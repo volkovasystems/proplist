@@ -1,0 +1,29 @@
+{
+  "name": "proplist",
+  "version": "0.0.0",
+  "description": "Smart list of object properties.",
+  "main": "proplist.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "smart",
+    "list",
+    "object",
+    "property",
+    "proplist"
+  ],
+  "homepage": "https://github.com/volkovasystems/proplist",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "harden": "^0.4.0",
+    "protype": "^0.0.0"
+  }
+}
