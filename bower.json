@@ -1,6 +1,6 @@
 {
   "name": "proplist",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Smart list of object properties.",
   "main": "proplist.js",
   "authors": [
@@ -23,7 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "harden": "^0.4.0",
-    "protype": "^0.0.0"
+    "cemento": "*",
+    "protype": "^0.1.0"
   }
 }

@@ -47,27 +47,24 @@
 
 	@include:
 		{
-			"harden": "harden",
+			"cemento": "cemento",
 			"protype": "protype"
 		}
 	@end-include
 */
 
 if( typeof require == "function" ){
-	var harden = require( "harden" );
+	var cemento = require( "cemento" );
 	var protype = require( "protype" );
 }
 
-if( typeof window != "undefined" && !( "harden" in window ) ){
-	throw new Error( "harden is not defined" );
+if( typeof window != "undefined" && !( "cemento" in window ) ){
+	throw new Error( "cemento is not defined" );
 }
 
 if( typeof window != "undefined" && !( "protype" in window ) ){
 	throw new Error( "protype is not defined" );
 }
-
-harden( "METHOD", "method" );
-harden( "PROPERTY", "property" );
 
 this.proplist = function proplist( entity ){
 	/*;
@@ -80,23 +77,20 @@ this.proplist = function proplist( entity ){
 
 	return Object.getOwnPropertyNames( entity )
 		.map( function onEachProperty( property ){
-			let holder = { };
-			let definition = harden.bind( holder );
-
-			definition( "property", property );
-			definition( "type", protype( property, FUNCTION )? METHOD : PROPERTY );
-
 			let descriptor = Object.getOwnPropertyDescriptor( entity, property );
-			definition( "enumerable", descriptor.enumerable );
-			definition( "configurable", descriptor.configurable );
-			definition( "writable", descriptor.writable );
 
-			definition( "get", descriptor.get );
-			definition( "set", descriptor.set );
-
-			definition( "value", descriptor.value );
-
-			return holder;
+			return cemento( {
+				"entity": entity,
+				"property": property,
+				"type": protype( property ).type,
+				"descriptor": descriptor,
+				"enumerable": descriptor.enumerable,
+				"configurable": descriptor.configurable,
+				"writable": descriptor.writable,
+				"get": descriptor.get,
+				"set": descriptor.set,
+				"value": descriptor.value
+			} );
 		} );
 };
 
