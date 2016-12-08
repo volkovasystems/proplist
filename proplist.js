@@ -55,30 +55,9 @@
 	@end-include
 */
 
-if( typeof require == "function" ){
-	var falzy = require( "falzy" );
-	var cemento = require( "cemento" );
-	var protype = require( "protype" );
-	var truly = require( "truly" );
-}
+const meto = require( "meto" );
 
-if( typeof window != "undefined" && !( "falzy" in window ) ){
-	throw new Error( "falzy is not defined" );
-}
-
-if( typeof window != "undefined" && !( "cemento" in window ) ){
-	throw new Error( "cemento is not defined" );
-}
-
-if( typeof window != "undefined" && !( "protype" in window ) ){
-	throw new Error( "protype is not defined" );
-}
-
-if( typeof window != "undefined" && !( "truly" in window ) ){
-	throw new Error( "truly is not defined" );
-}
-
-var proplist = function proplist( entity ){
+const proplist = function proplist( entity ){
 	/*;
 		@meta-configuration:
 			{
@@ -88,35 +67,7 @@ var proplist = function proplist( entity ){
 	*/
 
 	return Object.getOwnPropertyNames( entity )
-		.map( function onEachProperty( property ){
-			let descriptor = Object.getOwnPropertyDescriptor( entity, property );
-
-			let name = entity.name;
-			if( falzy( name ) &&
-				truly( entity.constructor ) &&
-				truly( entity.constructor.name ) )
-			{
-				name = entity.constructor.name;
-			}
-
-			let value = descriptor.value;
-
-			return cemento( {
-				"name": name,
-				"entity": entity,
-				"property": property,
-				"type": protype( value ).type,
-				"descriptor": descriptor,
-				"enumerable": descriptor.enumerable,
-				"configurable": descriptor.configurable,
-				"writable": descriptor.writable,
-				"get": descriptor.get,
-				"set": descriptor.set,
-				"value": value
-			} );
-		} );
+		.map( ( property ) => { return meto( property, entity ); } );
 };
 
-if( typeof module != "undefined" && typeof module.exports != "undefined" ){
-	module.exports = proplist;
-}
+module.exports = proplist;
