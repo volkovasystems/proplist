@@ -1,10 +1,13 @@
 {
   "name": "proplist",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Smart list of object properties.",
   "main": "proplist.js",
+  "support": "proplist.support.js",
+  "deploy": "proplist.deploy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel proplist.js -o proplist.support.js && webpack",
+    "test": "mocha proplist-test.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,6 @@
   },
   "homepage": "https://github.com/volkovasystems/proplist#readme",
   "dependencies": {
-    "meto": "0.0.0"
+    "meto": "^0.1.0"
   }
 }
