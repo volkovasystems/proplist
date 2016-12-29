@@ -34,6 +34,9 @@
 			"file": "proplist.js",
 			"module": "proplist",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/proplist.git",
 			"test": "proplist-test.js",
@@ -47,10 +50,7 @@
 
 	@include:
 		{
-			"falzy": "falzy",
-			"cemento": "cemento",
-			"protype": "protype",
-			"truly": "truly"
+			"meto": "meto"
 		}
 	@end-include
 */
