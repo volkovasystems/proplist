@@ -1,6 +1,6 @@
 {
   "name": "proplist",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Smart list of object properties.",
   "main": "proplist.deploy.js",
   "authors": [
@@ -24,6 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "meto": "^0.4.0"
+    "meto": "^0.5.0"
   }
 }
