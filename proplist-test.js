@@ -2,4 +2,4 @@
 
 const proplist = require( "./proplist.js" );
 
-console.log( proplist( { "name": "simple" } ) );
+console.log( require( "util" ).inspect( proplist( { "name": "simple" } ), { "showHidden": true } ) );
