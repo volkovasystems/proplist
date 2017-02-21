@@ -12,4 +12,5 @@ webpack \
 --dev && \
 bower install \
 meto \
---save
+--save \
+--force-latest
