@@ -66,8 +66,7 @@ const proplist = function proplist( entity ){
 		@end-meta-configuration
 	*/
 
-	return Object.getOwnPropertyNames( entity )
-		.map( ( property ) => { return meto( property, entity ); } );
+	return Object.getOwnPropertyNames( entity ).map( meto.bind( entity ) );
 };
 
 module.exports = proplist;
