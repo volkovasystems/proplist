@@ -1,5 +1,6 @@
 yarn add \
 babel-runtime \
+clazof \
 meto \
 --save && \
 yarn add \
@@ -11,6 +12,7 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
+clazof \
 meto \
 --save \
 --force-latest
