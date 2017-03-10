@@ -2,6 +2,7 @@ yarn add \
 babel-runtime \
 clazof \
 meto \
+repram \
 --save && \
 yarn add \
 babel-cli \
@@ -14,5 +15,6 @@ webpack \
 bower install \
 clazof \
 meto \
+repram \
 --save \
 --force-latest

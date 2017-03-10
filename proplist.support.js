@@ -51,13 +51,15 @@
               	@include:
               		{
               			"clazof": "clazof",
-              			"meto": "meto"
+              			"meto": "meto",
+              			"repram": "repram"
               		}
               	@end-include
               */var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var clazof = require("clazof");
 var meto = require("meto");
+var repram = require("repram");
 
 var proplist = function proplist(entity) {
 	/*;
@@ -68,7 +70,7 @@ var proplist = function proplist(entity) {
                                           	@end-meta-configuration
                                           */
 
-	return (0, _getOwnPropertyNames2.default)(entity).map(meto.bind(entity)).
+	return (0, _getOwnPropertyNames2.default)(entity).map(repram(meto.bind(entity), STRING)).
 	filter(function (definition) {return clazof(definition, "Meta");});
 };
 

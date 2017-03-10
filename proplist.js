@@ -51,13 +51,15 @@
 	@include:
 		{
 			"clazof": "clazof",
-			"meto": "meto"
+			"meto": "meto",
+			"repram": "repram"
 		}
 	@end-include
 */
 
 const clazof = require( "clazof" );
 const meto = require( "meto" );
+const repram = require( "repram" );
 
 const proplist = function proplist( entity ){
 	/*;
@@ -68,7 +70,7 @@ const proplist = function proplist( entity ){
 		@end-meta-configuration
 	*/
 
-	return Object.getOwnPropertyNames( entity ).map( meto.bind( entity ) )
+	return Object.getOwnPropertyNames( entity ).map( repram( meto.bind( entity ), STRING ) )
 		.filter( ( definition ) => { return clazof( definition, "Meta" ); } );
 };
 
