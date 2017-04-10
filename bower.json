@@ -1,6 +1,6 @@
 {
   "name": "proplist",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "Smart list of object properties.",
   "main": "proplist.deploy.js",
   "support": "proplist.support.js",
@@ -25,8 +25,8 @@
     "tests"
   ],
   "dependencies": {
-    "clazof": "^0.19.0",
-    "meto": "^0.17.0",
-    "repram": "^0.4.0"
+    "clazof": "^0.20.0",
+    "meto": "^0.18.0",
+    "repram": "^0.5.0"
   }
 }
