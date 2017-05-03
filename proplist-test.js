@@ -1,5 +1,7 @@
 "use strict";
-
+const assert = require( "assert" );
 const proplist = require( "./proplist.js" );
 
-console.log( JSON.stringify( proplist( { "name": "simple" } ) ) );
+assert.ok( JSON.stringify( proplist( { "name": "simple" } ) ) );
+
+console.log( "ok" );
