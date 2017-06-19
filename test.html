@@ -18,8 +18,8 @@
 		<script type="application/javascript">
 			QUnit.test( "proplist unit test", function( assert ) {
 
-				assert.ok( JSON.stringify( proplist( { "name": "simple" } ) ) );
-				
+				assert.equal( typeof proplist( { "name": "simple" } ) == "object", true, "should be true" );
+
 			} );
 		</script>
 	</body>

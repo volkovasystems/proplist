@@ -1,6 +1,6 @@
 const assert = require( "assert" );
 const proplist = require( "./proplist.js" );
 
-assert.ok( JSON.stringify( proplist( { "name": "simple" } ) ) );
+assert.equal( typeof proplist( { "name": "simple" } ) == "object", true, "should be true" );
 
 console.log( "ok" );
