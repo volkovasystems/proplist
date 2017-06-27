@@ -1,6 +1,6 @@
 {
   "name": "proplist",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "description": "Smart list of object properties.",
   "main": "proplist.js",
   "support": "proplist.support.js",
@@ -33,7 +33,7 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "clazof": "^0.31.0",
-    "meto": "^0.28.0",
+    "meto": "^0.29.0",
     "repram": "^0.15.0"
   },
   "devDependencies": {
