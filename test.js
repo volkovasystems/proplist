@@ -66,6 +66,14 @@ const proplist = require( "./proplist.js" );
 
 describe( "proplist", ( ) => {
 
+	describe( "`proplist( { 'name': 'simple' } )`", ( ) => {
+		it( "should return object type", ( ) => {
+
+			assert.equal( typeof proplist( { "name": "simple" } ) == "object", true );
+
+		} );
+	} );
+
 } );
 
 //: @end-server

@@ -1,16 +1,32 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2017-08-28T20:15:02.541Z",
-    "end": "2017-08-28T20:15:02.542Z",
-    "duration": 1
+    "start": "2017-08-30T08:30:09.050Z",
+    "end": "2017-08-30T08:30:09.057Z",
+    "duration": 7
   },
-  "tests": [],
+  "tests": [
+    {
+      "title": "should return object type",
+      "fullTitle": "proplist `proplist( { 'name': 'simple' } )` should return object type",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
   "pending": [],
   "failures": [],
-  "passes": []
+  "passes": [
+    {
+      "title": "should return object type",
+      "fullTitle": "proplist `proplist( { 'name': 'simple' } )` should return object type",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
 }

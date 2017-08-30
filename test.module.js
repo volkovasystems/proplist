@@ -70,6 +70,14 @@ const path = require( "path" );
 
 describe( "proplist", ( ) => {
 
+	describe( "`proplist( { 'name': 'simple' } )`", ( ) => {
+		it( "should return object type", ( ) => {
+
+			assert.equal( typeof proplist( { "name": "simple" } ) == "object", true );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -78,6 +86,15 @@ describe( "proplist", ( ) => {
 //: @client:
 
 describe( "proplist", ( ) => {
+
+	describe( "`proplist( { 'name': 'simple' } )`", ( ) => {
+		it( "should return object type", ( ) => {
+
+			assert.equal( typeof proplist( { "name": "simple" } ) == "object", true );
+
+		} );
+	} );
+
 } );
 
 //: @end-client
@@ -86,6 +103,27 @@ describe( "proplist", ( ) => {
 //: @bridge:
 
 describe( "proplist", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`proplist( { 'name': 'simple' } )`", ( ) => {
+		it( "should return object type", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+
+					return typeof proplist( { "name": "simple" } ) == "object";
+
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
